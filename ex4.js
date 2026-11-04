@@ -10,6 +10,12 @@
 
 const { URL } = require("url");
 
-const urlStr = 'http://localhost:3000/users/list?role=admin&active=true#top';
+const urlStr = "http://localhost:3000/users/list?role=admin&active=true#top";
+
+const url_object = new URL(urlStr);
+
+console.log(
+  `Hostname: ${url_object.hostname}\nPathname: ${url_object.pathname}\nProtocol: ${url_object.protocol}\nQuery: ${url_object.search}\nHash: ${url_object.hash}`,
+);
 
 // write your code here

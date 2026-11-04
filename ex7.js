@@ -10,4 +10,11 @@
 
 const http = require("http");
 
-// write your code here
+const server = http.createServer((req, res) => {
+  console.log(
+    `Method: ${req.method}\nURL: ${req.url}\nHTTP Version: ${req.httpVersion}`,
+  );
+  res.end("finished printing");
+});
+
+server.listen(3000);

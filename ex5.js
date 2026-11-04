@@ -9,6 +9,14 @@
 
 const { URL } = require("url");
 
-const urlStr = 'https://site.com/products?id=15&type=book&lang=en';
+const urlStr = "https://site.com/products?id=15&type=book&lang=en";
+
+const url_object = new URL(urlStr);
+
+console.log(
+  `ID: ${url_object.searchParams.get("id")}\nType: ${url_object.searchParams.get("type")}\nLanguage: ${url_object.searchParams.get(
+    "lang",
+  )}`,
+);
 
 // write your code here
